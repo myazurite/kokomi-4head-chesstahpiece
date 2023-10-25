@@ -120,9 +120,6 @@ input {
 
 .bottom {
     display: flex;
-    /* border-right: 2px solid black; */
-    /* border-left: 2px solid black; */
-    /* border-bottom: 2px solid black; */
     font-family: sans-serif;
     width: fit-content;
     font-size: 3vmin;
