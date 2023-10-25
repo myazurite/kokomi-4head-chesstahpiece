@@ -1,0 +1,163 @@
+@font-face {
+    font-family: Chess; 
+    src: url(fonts/Chess7-DaE1.ttf);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    width: 80%;
+    height: 80%;
+    background: url("./kokomi.png") no-repeat center;
+    background-size: cover;
+    background-position-y: -500px;
+    margin: auto;
+}
+
+input {
+    /* margin-left: 50px;
+    margin-top: 50px; */
+}
+
+.board {
+    /* width: 600px;
+    height: 600px; */
+    margin: auto;
+    width: 70vmin;
+    height: 55vmin;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    /* margin-left: 50px;
+    margin-top: 50px; */
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    transform-origin: center;
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* max-width: 75px;
+    max-height: 75px; */
+}
+
+.dark {
+    background-color: rgba(0,0,0,0.2);
+}
+
+.light {
+    background-color: transparent;
+}
+
+.white {
+    /* background-color: white;
+    color: black; */
+    color: white;
+    padding: 0px;
+    border-radius: 5px;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.black {
+    /* background-color: black;
+    color: white; */
+    color: black;
+    padding: 0px;
+    border-radius: 5px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+.piece {
+    position: absolute;
+    font-family: Chess;
+    font-size: 30px;
+    transform-origin: center;
+}
+
+
+
+@media (max-width: 700px) {
+    .piece {
+        font-size: 58px;
+    }
+}
+
+@media (max-width: 510px) {
+    .piece {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 410px) {
+    .piece {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 300px) {
+    .piece {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 240px) {
+    .piece {
+        font-size: 23px;
+    }
+}
+
+/* .dark .piece {
+    color: white;
+} */
+
+.bottom {
+    display: flex;
+    /* border-right: 2px solid black; */
+    /* border-left: 2px solid black; */
+    /* border-bottom: 2px solid black; */
+    font-family: sans-serif;
+    width: fit-content;
+    font-size: 3vmin;
+    display: none;
+}
+
+.messageBox {
+    width: 75vmin;
+    height: 4.7vmin;
+    background-color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    /* margin-left: 50px; */
+    border-right: 2px solid black;
+}
+
+#flip {
+    width: 12.5vmin;
+    background-color: #dddddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid black;
+}
+
+#resetBtn {
+    width: 12.5vmin;
+    background-color: #dddddd;
+    border: none;
+    font-size: 3vmin;
+}
+
+#resetBtn:hover, #flip:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
